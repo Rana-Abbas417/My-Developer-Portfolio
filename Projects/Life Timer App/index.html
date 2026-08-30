@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Journey Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <div id="initial-prompt" class="screen active">
+          <h1>Kindly Enter Your Date Of Birth</h1>
+        </div>
+
+        <div id="timer-display" class="screen">
+          <h1>The Life Journey You Have Covered Till Now Is</h1>
+          <div class="time-grid">
+            <div class="time-box">
+              <span id="years">0</span>
+              <p>Year</p>
+            </div>
+            <div class="time-box">
+              <span id="months">0</span>
+              <p>Month</p>
+            </div>
+            <div class="time-box">
+              <span id="days">0</span>
+              <p>Day</p>
+            </div>
+            <div class="time-box">
+              <span id="hours">0</span>
+              <p>Hours</p>
+            </div>
+            <div class="time-box">
+              <span id="minutes">0</span>
+              <p>Minutes</p>
+            </div>
+            <div class="time-box">
+              <span id="seconds">0</span>
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-container">
+        <div id="settings-panel" class="settings-panel hidden">
+          <input type="date" id="dob-input" required />
+          <button id="add-dob-btn">Add DOB</button>
+        </div>
+        <button id="settings-toggle" class="settings-btn">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

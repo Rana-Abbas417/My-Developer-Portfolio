@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-container nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <span class="gradient-text">Code With Abbas</span>
+        </a>
+        <div class="nav-actions">
+          <button
+            class="nav-toggle-btn"
+            id="mobileMenuToggle"
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
+          <nav>
+            <ul class="nav-list" id="primaryNav">
+              <li class="theme-toggle-item">
+                <button
+                  class="theme-btn"
+                  id="themeToggleBtn"
+                  aria-label="Toggle Dark/Light mode"
+                >
+                  <span class="theme-icon moon-icon">🌙</span>
+                  <span class="theme-icon sun-icon">☀️</span>
+                </button>
+              </li>
+              <li>
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li><a href="resume.html" class="nav-link">Resume</a></li>
+              <li>
+                <a href="portfolio.html" class="nav-link nav-active"
+                  >Projects</a
+                >
+              </li>
+              <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="site-container">
+        <div class="section-head">
+          <span class="section-badge">PROJECT ARCHIVE</span>
+          <h1 class="section-title">
+            Featured <span class="gradient-text">Web Works</span>
+          </h1>
+        </div>
+
+        <div class="cards-grid">
+          <article class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="assets/Online-Examination-System.png"
+                alt="Online Examination System Screenshot"
+                class="project-thumbnail"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/131a2a/38bdf8?text=Online+Exam+System'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Online Examination System</h3>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" target="_blank" class="link-btn">Live Demo ↗</a>
+                <a href="https://github.com" target="_blank" class="link-btn"
+                  >Source Code ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="assets/Online-Voting-System.png"
+                alt="Online Voting System Screenshot"
+                class="project-thumbnail"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/131a2a/38bdf8?text=Online+Voting+System'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Online Voting System</h3>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" target="_blank" class="link-btn">Live Demo ↗</a>
+                <a href="https://github.com" target="_blank" class="link-btn"
+                  >Source Code ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="assets/Student-Management-System.png"
+                alt="Student Management System Screenshot"
+                class="project-thumbnail"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/131a2a/38bdf8?text=Student+Management+System'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Student Management System</h3>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" target="_blank" class="link-btn">Live Demo ↗</a>
+                <a href="https://github.com" target="_blank" class="link-btn"
+                  >Source Code ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="assets/Life-Time-Calculator.jpg"
+                alt="Dynamic Time Utility Screenshot"
+                class="project-thumbnail"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/131a2a/38bdf8?text=Dynamic+Web+Tool'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Dynamic Time Utility</h3>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="Projects/Life Timer App/index.html"
+                  target="_blank"
+                  class="link-btn"
+                  >Live Demo ↗</a
+                >
+                <a href="https://github.com" target="_blank" class="link-btn"
+                  >Source Code ↗</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="assets/Password-Generator.png"
+                alt="Password Generator Screenshot"
+                class="project-thumbnail"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/131a2a/38bdf8?text=Dynamic+Web+Tool'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Password Generator</h3>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="Projects/Password Generator/index.html"
+                  target="_blank"
+                  class="link-btn"
+                  >Live Demo ↗</a
+                >
+                <a href="https://github.com" target="_blank" class="link-btn"
+                  >Source Code ↗</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="assets/QR-Code-Generator.png"
+                alt="QR Code Generator Screenshot"
+                class="project-thumbnail"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/131a2a/38bdf8?text=QR+Code+Generator'
+                "
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">QR Code Generator</h3>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="Projects/QR Code Generator App/index.html"
+                  target="_blank"
+                  class="link-btn"
+                  >Live Demo ↗</a
+                >
+                <a href="https://github.com" target="_blank" class="link-btn"
+                  >Source Code ↗</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-container">
+        <p>© 2026 Code With Abbas. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

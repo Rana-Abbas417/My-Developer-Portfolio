@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-container nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <span class="gradient-text">Code With Abbas</span>
+        </a>
+        <div class="nav-actions">
+          <button
+            class="nav-toggle-btn"
+            id="mobileMenuToggle"
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
+          <nav>
+            <ul class="nav-list" id="primaryNav">
+              <li class="theme-toggle-item">
+                <button
+                  class="theme-btn"
+                  id="themeToggleBtn"
+                  aria-label="Toggle Dark/Light mode"
+                >
+                  <span class="theme-icon moon-icon">🌙</span>
+                  <span class="theme-icon sun-icon">☀️</span>
+                </button>
+              </li>
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="resume.html" class="nav-link">Resume</a></li>
+              <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+              <li>
+                <a href="contact.html" class="nav-link nav-active"
+                  >Contact Me</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="site-container">
+        <div class="section-head">
+          <span class="section-badge">LET'S CONNECT</span>
+          <h1 class="section-title">
+            Get In <span class="gradient-text">Touch</span>
+          </h1>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 0.8rem">
+              Let's discuss a project.
+            </h2>
+            <p class="card-desc">
+              I am available for web development opportunities, freelancing, and
+              technical collaboration. Feel free to send a message.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-detail-card">
+                <span style="font-size: 1.5rem">📧</span>
+                <div>
+                  <p style="font-size: 0.8rem; color: var(--text-muted)">
+                    EMAIL
+                  </p>
+                  <p style="font-weight: 600">muhammad12abbas45@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-card">
+                <span style="font-size: 1.5rem">📍</span>
+                <div>
+                  <p style="font-size: 0.8rem; color: var(--text-muted)">
+                    LOCATION
+                  </p>
+                  <p style="font-weight: 600">Ahmadpur East</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-card">
+                <span style="font-size: 1.5rem">💻</span>
+                <div>
+                  <p style="font-size: 0.8rem; color: var(--text-muted)">
+                    GitHub
+                  </p>
+                  <a
+                    href="https://github.com/Rana-Abbas417"
+                    target="_blank"
+                    style="
+                      color: var(--accent-cyan);
+                      text-decoration: none;
+                      font-weight: 600;
+                    "
+                    >Collaborate on GitHub ↗</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="userName" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="name"
+                  class="form-input"
+                  placeholder="e.g. Alex Smith"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="email"
+                  class="form-input"
+                  placeholder="e.g. alex@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userMsg" class="form-label">Message</label>
+                <textarea
+                  id="userMsg"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submitBtn"
+                class="btn-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Send Message 🚀
+              </button>
+              <div id="formStatus" class="status-box"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-container">
+        <p>© 2026 Code With Abbas. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

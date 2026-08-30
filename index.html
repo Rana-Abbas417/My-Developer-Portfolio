@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Abbas Portfolio</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-container nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <span class="gradient-text">Code With Abbas</span>
+        </a>
+        <div class="nav-actions">
+          <button
+            class="nav-toggle-btn"
+            id="mobileMenuToggle"
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
+          <nav>
+            <ul class="nav-list" id="primaryNav">
+              <li class="theme-toggle-item">
+                <button
+                  class="theme-btn"
+                  id="themeToggleBtn"
+                  aria-label="Toggle Dark/Light mode"
+                >
+                  <span class="theme-icon moon-icon">🌙</span>
+                  <span class="theme-icon sun-icon">☀️</span>
+                </button>
+              </li>
+              <li>
+                <a href="index.html" class="nav-link nav-active">Home</a>
+              </li>
+              <li><a href="resume.html" class="nav-link">Resume</a></li>
+              <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+              <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="site-container">
+        <section class="about-hero">
+          <div class="profile-card">
+            <div class="profile-glow"></div>
+            <div class="profile-img-box">
+              <img
+                src="assets/Muhammad-Abbas.jpg"
+                alt="Profile Picture"
+                class="profile-avatar"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x400/131a2a/38bdf8?text=Picture'
+                "
+              />
+            </div>
+          </div>
+
+          <div class="about-info-panel">
+            <span class="section-badge">👋 WELCOME TO MY PORTFOLIO</span>
+            <h1>Hi, I'm <span class="gradient-text">Muhammad Abbas</span></h1>
+            <p class="about-role">💻 Full-Stack Web Developer</p>
+            <p class="about-bio">
+              Computer Science student and full-stack developer dedicated to
+              building high-performance PHP/MySQL web applications, desktop
+              utilities, and responsive web designs.
+            </p>
+            <div class="btn-group">
+              <a href="portfolio.html" class="btn-primary">View Projects 🚀</a>
+              <a href="contact.html" class="btn-secondary">Contact Me 📬</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <span class="section-badge">CORE STRENGTHS</span>
+            <h2 class="section-title">What I Focus On</h2>
+          </div>
+
+          <div class="cards-grid">
+            <article class="glass-card">
+              <div style="font-size: 1.8rem; margin-bottom: 0.8rem">⚡</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem">
+                Web Development
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem">
+                Building secure, scalable, and dynamic backend applications
+                using PHP, MySQL, and vanilla JavaScript.
+              </p>
+            </article>
+
+            <article class="glass-card">
+              <div style="font-size: 1.8rem; margin-bottom: 0.8rem">🗄️</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem">
+                Database Design
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem">
+                Structuring normalized relational schemas, queries, and
+                authentication workflows.
+              </p>
+            </article>
+
+            <article class="glass-card">
+              <div style="font-size: 1.8rem; margin-bottom: 0.8rem">🚀</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem">
+                Responsiveness & Performance
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem">
+                Writing lightweight, mobile-first code and modern fluid layouts
+                engineered for instant loading speeds and seamless rendering
+                across all screen sizes.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-container">
+        <p>© 2026 Code With Abbas. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+:root {
+
+    --primary: #6366f1;
+    --secondary: #ec4899;
+    --accent: #22d3ee;
+
+    --background-dark: #09090f;
+
+    --card-bg: rgba(255, 255, 255, 0.12);
+
+    --text: #ffffff;
+
+    --success: #22c55e;
+    --warning: #facc15;
+    --danger: #ef4444;
+
+}
+
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+
+body {
+
+    min-height: 100vh;
+
+    font-size: 1.6rem;
+
+    color: var(--text);
+
+    background:
+
+        linear-gradient(135deg,
+            #09090f,
+            #111827,
+            #312e81,
+            #831843);
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 15s ease infinite;
+
+}
+
+
+
+/* Animated Background */
+
+@keyframes gradientMove {
+
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+
+
+
+
+.container {
+
+
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 2rem;
+
+}
+
+
+
+
+
+.box {
+
+
+    width: 100%;
+
+    max-width: 42rem;
+
+
+    background: var(--card-bg);
+
+
+    backdrop-filter: blur(20px);
+
+
+    border:
+
+        1px solid rgba(255, 255, 255, 0.2);
+
+
+
+    border-radius: 2rem;
+
+
+    overflow: hidden;
+
+
+    box-shadow:
+
+        0 25px 50px rgba(0, 0, 0, 0.35);
+
+
+    animation: cardAppear 0.8s ease;
+
+
+}
+
+
+
+
+
+@keyframes cardAppear {
+
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(40px) scale(.95);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0) scale(1);
+
+    }
+
+}
+
+
+
+
+
+.upper {
+
+
+    padding: 3rem;
+
+
+}
+
+
+
+
+
+h1 {
+
+
+    text-align: center;
+
+
+    font-size: 2.8rem;
+
+
+    margin-bottom: 2.5rem;
+
+
+    font-weight: 700;
+
+
+}
+
+
+
+
+
+.lock-icon {
+
+
+    display: inline-block;
+
+
+    animation:
+
+        lockAnimation 2s infinite;
+
+
+}
+
+
+
+@keyframes lockAnimation {
+
+
+    0%,
+    100% {
+
+        transform: rotate(0);
+
+    }
+
+
+    50% {
+
+        transform: rotate(10deg);
+
+    }
+
+}
+
+
+
+
+
+.password-container {
+
+
+    display: flex;
+
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+
+
+}
+
+
+
+
+
+#password {
+
+
+    flex: 1;
+
+
+    min-height: 5rem;
+
+
+    background:
+
+        rgba(255, 255, 255, .15);
+
+
+    border-radius: 1rem;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: center;
+
+
+    padding: 1rem;
+
+
+    color: white;
+
+
+    font-weight: 700;
+
+
+    letter-spacing: .4rem;
+
+
+    word-break: break-all;
+
+
+    cursor: pointer;
+
+
+    border:
+
+        1px solid rgba(255, 255, 255, .2);
+
+
+}
+
+
+
+
+
+#copyBtn {
+
+
+    border: none;
+
+
+    border-radius: 1rem;
+
+
+    padding: 0 1.5rem;
+
+
+    cursor: pointer;
+
+
+    background:
+
+        var(--accent);
+
+
+    color: #001;
+
+
+    font-weight: 600;
+
+
+    transition: .3s;
+
+
+}
+
+
+
+#copyBtn:hover {
+
+
+    transform: translateY(-3px);
+
+
+    filter: brightness(1.1);
+
+
+}
+
+
+
+
+
+.strength-box {
+
+
+    margin-bottom: 2rem;
+
+
+}
+
+
+
+
+
+.strength-label {
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+
+    margin-bottom: .8rem;
+
+
+}
+
+
+
+
+
+.strength-bar {
+
+
+    height: .8rem;
+
+
+    background:
+
+        rgba(255, 255, 255, .2);
+
+
+    border-radius: 2rem;
+
+
+    overflow: hidden;
+
+
+}
+
+
+
+
+
+#strengthProgress {
+
+
+    height: 100%;
+
+
+    width: 0%;
+
+
+    transition: .4s;
+
+
+}
+
+
+
+
+
+.range-container {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 1rem;
+
+
+    margin-bottom: 2rem;
+
+
+}
+
+
+
+
+
+input[type="range"] {
+
+
+    width: 100%;
+
+
+    cursor: pointer;
+
+
+    accent-color: var(--primary);
+
+
+}
+
+
+
+
+
+.checkboxes {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 1.2rem;
+
+
+}
+
+
+
+
+
+.form-control {
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    align-items: center;
+
+
+    padding:
+
+        1rem;
+
+
+    background:
+
+        rgba(255, 255, 255, .08);
+
+
+    border-radius: 1rem;
+
+
+    transition: .3s;
+
+
+}
+
+
+
+
+
+.form-control:hover {
+
+
+    background:
+
+        rgba(255, 255, 255, .15);
+
+
+}
+
+
+
+
+
+input[type="checkbox"] {
+
+
+    width: 2rem;
+
+    height: 2rem;
+
+    cursor: pointer;
+
+    accent-color: var(--secondary);
+
+
+}
+
+
+
+
+
+#genBtn {
+
+
+    width: 100%;
+
+
+    border: none;
+
+
+    padding: 1.6rem;
+
+
+    font-size: 1.8rem;
+
+
+    font-weight: 700;
+
+
+    cursor: pointer;
+
+
+    color: white;
+
+
+    background:
+
+
+        linear-gradient(135deg,
+
+            var(--primary),
+
+            var(--secondary));
+
+
+    transition: .3s;
+
+
+}
+
+
+
+
+
+#genBtn:hover {
+
+
+    letter-spacing: .1rem;
+
+
+    filter:
+
+        brightness(1.15);
+
+
+}
+
+
+
+
+
+#genBtn:active {
+
+
+    transform: scale(.97);
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:450px) {
+
+
+    .upper {
+
+        padding: 2rem;
+
+    }
+
+
+
+    h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+
+    #password {
+
+        letter-spacing: .2rem;
+
+        font-size: 1.4rem;
+
+    }
+
+
+}

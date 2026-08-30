@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+.background {
+  background-image: url(images/nature.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+/* Screen Visibility Logic */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Live Timer Grid layout */
+.time-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-box span {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+
+.time-box p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Settings UI in Bottom-Right Corner */
+.settings-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 100;
+}
+
+.settings-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.settings-btn:hover {
+  transform: rotate(45deg);
+}
+
+/* Overlay Panel for Input */
+.settings-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.settings-panel.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Form Elements styling */
+#dob-input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+#add-dob-btn {
+  padding: 8px 16px;
+  background-color: rgb(14, 224, 84);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#add-dob-btn:hover {
+  background-color: #0b9c36;
+}
+
+/* Responsive Scaling for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .time-box span {
+    font-size: 3rem;
+  }
+
+  .time-box p {
+    font-size: 1.4rem;
+  }
+
+  .time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 480px) {
+  .time-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
